@@ -41,9 +41,9 @@ def scanner(input, starting_position):
 
     if starting_position >= len(input):
         raise ValueError(f"Błąd: Nieoczekiwany koniec wejścia w kolumnie {starting_position}.")
-    
+
     if input[starting_position] == ')': # omijamy nawias zamykający
-        if '(' not in input[:starting_position]:# to można dopracować
+        if '(' not in input[:starting_position]:
             raise ValueError(f"Błąd: Brak nawiasu otwierającego dla ')' w kolumnie {starting_position}.")
         return Token("nawias", char, starting_position, 1), starting_position + 1
 
@@ -58,13 +58,13 @@ def scanner(input, starting_position):
     if input[starting_position] == '(': # sprawdzamy czy jest nawiasem
         try:
             length = get_bracket_token(input[starting_position + 1:])
-            return Token("nawiasy", char + input[starting_position + length], starting_position, 2), starting_position + 1
+            return Token("nawiasy", char + input[starting_position + length], starting_position, length), starting_position + 1
         except ValueError as e:
             raise ValueError(f"{str(e)} w kolumnie {starting_position}.")
-    
+
     raise ValueError(f"Błąd: Nieznany znak '{char}' w kolumnie {starting_position}.")
 
-    
+
 
 
 # Odczyt wejścia z pliku
@@ -84,7 +84,7 @@ try:
     while position < len(input_text):
         token, position = scanner(input_text, position)
         tokens.append(token)
-    
+
     # Wypisanie wyników
     for token in tokens:
         print(token)
