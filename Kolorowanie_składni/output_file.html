@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+.komentarz {color: rgb(217, 217, 217);}
+.string {color: rgb(110, 186, 74);}
+.keyword {color: rgb(222, 122, 82);}
+.nazwa_zmiennej {color: rgb(38, 37, 37);}
+.double_operators {color: rgb(143, 247, 247);}
+.single_operators {color: rgb(143, 247, 247);}
+.bracket {color: rgb(241, 247, 171);}
+.znak_specjalny {color: rgb(245, 81, 81);}
+.int {color: rgb(104, 138, 252);}
+</style>
+</head>
+<body>
+<pre>
+<span class="komentarz"># System rezerwacji biletów do kina</span><span class="znak_bialy">
+</span><span class="znak_bialy">
+</span><span class="komentarz"># Lista dostępnych filmów (film: dostępne miejsca)</span><span class="znak_bialy">
+</span><span class="nazwa_zmiennej">movies</span><span class="znak_bialy"> </span><span class="single_operators">=</span><span class="znak_bialy"> </span><span class="bracket">{</span><span class="znak_bialy">
+</span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="string">"Incepcja"</span><span class="znak_specjalny">:</span><span class="znak_bialy"> </span><span class="bracket">{</span><span class="string">"cena"</span><span class="znak_specjalny">:</span><span class="znak_bialy"> </span><span class="int">20</span><span class="znak_specjalny">,</span><span class="znak_bialy"> </span><span class="string">"miejsca"</span><span class="znak_specjalny">:</span><span class="znak_bialy"> </span><span class="int">10</span><span class="bracket">}</span><span class="znak_specjalny">,</span><span class="znak_bialy">
+</span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="string">"Matrix"</span><span class="znak_specjalny">:</span><span class="znak_bialy"> </span><span class="bracket">{</span><span class="string">"cena"</span><span class="znak_specjalny">:</span><span class="znak_bialy"> </span><span class="int">25</span><span class="znak_specjalny">,</span><span class="znak_bialy"> </span><span class="string">"miejsca"</span><span class="znak_specjalny">:</span><span class="znak_bialy"> </span><span class="int">8</span><span class="bracket">}</span><span class="znak_specjalny">,</span><span class="znak_bialy">
+</span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="string">"Avatar"</span><span class="znak_specjalny">:</span><span class="znak_bialy"> </span><span class="bracket">{</span><span class="string">"cena"</span><span class="znak_specjalny">:</span><span class="znak_bialy"> </span><span class="int">30</span><span class="znak_specjalny">,</span><span class="znak_bialy"> </span><span class="string">"miejsca"</span><span class="znak_specjalny">:</span><span class="znak_bialy"> </span><span class="int">5</span><span class="bracket">}</span><span class="znak_bialy">
+</span><span class="bracket">}</span><span class="znak_bialy">
+</span><span class="znak_bialy">
+</span><span class="keyword">def</span><span class="znak_bialy"> </span><span class="nazwa_zmiennej">show_movies</span><span class="bracket">(</span><span class="bracket">)</span><span class="znak_specjalny">:</span><span class="znak_bialy">
+</span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="string">""</span><span class="string">"Wyświetla listę dostępnych filmów i miejsc"</span><span class="string">""</span><span class="znak_bialy">
+</span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="keyword">print</span><span class="bracket">(</span><span class="string">"\nDostępne filmy:"</span><span class="bracket">)</span><span class="znak_bialy">
+</span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="keyword">for</span><span class="znak_bialy"> </span><span class="nazwa_zmiennej">i</span><span class="znak_specjalny">,</span><span class="znak_bialy"> </span><span class="bracket">(</span><span class="nazwa_zmiennej">movie</span><span class="znak_specjalny">,</span><span class="znak_bialy"> </span><span class="nazwa_zmiennej">details</span><span class="bracket">)</span><span class="znak_bialy"> </span><span class="keyword">in</span><span class="znak_bialy"> </span><span class="nazwa_zmiennej">enumerate</span><span class="bracket">(</span><span class="nazwa_zmiennej">movies</span><span class="znak_specjalny">.</span><span class="nazwa_zmiennej">items</span><span class="bracket">(</span><span class="bracket">)</span><span class="znak_specjalny">,</span><span class="znak_bialy"> </span><span class="int">1</span><span class="bracket">)</span><span class="znak_specjalny">:</span><span class="znak_bialy">
+</span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="keyword">print</span><span class="bracket">(</span><span class="nazwa_zmiennej">f</span><span class="string">"{i}. {movie} - {details['miejsca']} miejsc (Cena: {details['cena']} zł)"</span><span class="bracket">)</span><span class="znak_bialy">
+</span></pre>
+</body>
+<html>

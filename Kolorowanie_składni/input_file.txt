@@ -1,0 +1,14 @@
+# System rezerwacji biletów do kina
+
+# Lista dostępnych filmów (film: dostępne miejsca)
+movies = {
+    "Incepcja": {"cena": 20, "miejsca": 10},
+    "Matrix": {"cena": 25, "miejsca": 8},
+    "Avatar": {"cena": 30, "miejsca": 5}
+}
+
+def show_movies():
+    """Wyświetla listę dostępnych filmów i miejsc"""
+    print("\nDostępne filmy:")
+    for i, (movie, details) in enumerate(movies.items(), 1):
+        print(f"{i}. {movie} - {details['miejsca']} miejsc (Cena: {details['cena']} zł)")
