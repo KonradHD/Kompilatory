@@ -55,6 +55,23 @@ def get_string(input):
             return str
     raise ValueError("Brak pełnego cudzysłowu.")
 
+def get_float_token(input):
+    number = ""
+    dot_seen = False
+    
+    for i, char in enumerate(input):
+        if char.isdigit():
+            number += char
+        elif char == "." and not dot_seen:
+            number += char
+            dot_seen = True
+        else:
+            break
+    
+    if number.count(".") == 1 and len(number) > 1:
+        return number
+    return None
+
 
 KEYWORDS = ["import", "range", "def", "if", "else", "break", "in", "not", "return", "raise", "for", "try", "while", "except", "len",
             "True", "False", "print"]
@@ -104,10 +121,13 @@ def scanner(input, starting_position):
     if input[starting_position] in SPECIAL_SIGNS:
         return Token("znak_specjalny", input[starting_position], starting_position, 1), starting_position + 1
 
-    if input[starting_position].isdigit() or (input[starting_position] == '-' and input[starting_position+1].isdigit()): # sprawdzamy czy jest liczbą
-        digit = get_int_token(input[starting_position:])
-        ending_position = starting_position + len(digit)
-        return Token("int", digit, starting_position, len(digit)), ending_position
+    if input[starting_position].isdigit() or (input[starting_position] == '-' and input[starting_position+1].isdigit()):
+        float_value = get_float_token(input[starting_position:])
+        if float_value:
+            return Token("float", float_value, starting_position, len(float_value)), starting_position + len(float_value)
+
+    digit = get_int_token(input[starting_position:])
+    return Token("int", digit, starting_position, len(digit)), starting_position + len(digit)
 
     raise ValueError(f"Błąd: Nieznany znak '{input[starting_position]}' w kolumnie {starting_position}.")
 

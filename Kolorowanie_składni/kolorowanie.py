@@ -24,6 +24,8 @@ colors_html = ("<!DOCTYPE html>\n<html lang=\"en\">\n"
                ".bracket {color: rgb(241, 247, 171);}\n"
                ".znak_specjalny {color: rgb(245, 81, 81);}\n"
                ".int {color: rgb(104, 138, 252);}\n"
+               ".float {color: rgb(255, 0, 255);}\n"
+
                "</style>\n</head>\n<body>\n<pre>\n")
 
 with open("output_file.html", "w") as output_file:

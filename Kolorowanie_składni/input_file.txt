@@ -2,7 +2,7 @@
 
 # Lista dostępnych filmów (film: dostępne miejsca)
 movies = {
-    "Incepcja": {"cena": 20, "miejsca": 10},
+    "Incepcja": {"cena": 20.50, "miejsca": 10},
     "Matrix": {"cena": 25, "miejsca": 8},
     "Avatar": {"cena": 30, "miejsca": 5}
 }
