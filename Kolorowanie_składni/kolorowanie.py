@@ -31,4 +31,4 @@ colors_html = ("<!DOCTYPE html>\n<html lang=\"en\">\n"
 with open("output_file.html", "w") as output_file:
     output_file.write(colors_html)
     output_file.write(to_html)
-    output_file.write("</pre>\n</body>\n<html>")
+    output_file.write("</pre>\n</body>\n</html>")
