@@ -55,6 +55,7 @@ def get_string(input):
             return str
     raise ValueError("Brak pełnego cudzysłowu.")
 
+
 def get_float_token(input):
     number = ""
     dot_seen = False
@@ -73,13 +74,14 @@ def get_float_token(input):
     return None
 
 
-KEYWORDS = ["import", "range", "def", "if", "else", "break", "in", "not", "return", "raise", "for", "try", "while", "except", "len",
-            "True", "False", "print"]
+KEYWORDS = ["import", "range", "def", "if", "else", "break", "in", "not", "return", "raise", "for", "try", "while", "except",
+            "True", "False"]
 SINGLE_OPERATORS = ["=", "+", "-", "/", "*", ">", "<"]
 DOUBLE_OPERATORS = ["+=", "-=", "==", "//", "**", "<=", ">="]
 BRACKETS = ["(", ")", "[", "]", "{", "}"]
 SPECIAL_SIGNS = [".", ",", ":"]
 WHITE_SIGNS = [' ', '\n', '\t', '\r']
+METHODS = ["print", "len", "enumerate", "append", "remove", "sort", "find", "replace"]
 
 
 def scanner(input, starting_position):
@@ -105,6 +107,8 @@ def scanner(input, starting_position):
         ending_position = starting_position + len(word)
         if word in KEYWORDS:
             return Token("keyword", word, starting_position, len(word)), ending_position
+        if word in METHODS:
+            return Token("metody", word, starting_position, len(word)), ending_position
         return Token("nazwa_zmiennej", word, starting_position, len(word)), ending_position
 
     if input[starting_position] in SINGLE_OPERATORS: # sprawdzamy czy jest działaniem
@@ -126,8 +130,8 @@ def scanner(input, starting_position):
         if float_value:
             return Token("float", float_value, starting_position, len(float_value)), starting_position + len(float_value)
 
-    digit = get_int_token(input[starting_position:])
-    return Token("int", digit, starting_position, len(digit)), starting_position + len(digit)
+        digit = get_int_token(input[starting_position:])
+        return Token("int", digit, starting_position, len(digit)), starting_position + len(digit)
 
     raise ValueError(f"Błąd: Nieznany znak '{input[starting_position]}' w kolumnie {starting_position}.")
 

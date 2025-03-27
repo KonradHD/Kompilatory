@@ -8,10 +8,11 @@
 .nazwa_zmiennej {color: rgb(38, 37, 37);}
 .double_operators {color: rgb(143, 247, 247);}
 .single_operators {color: rgb(143, 247, 247);}
-.bracket {color: rgb(241, 247, 171);}
+.bracket {color: rgb(49, 30, 66);}
 .znak_specjalny {color: rgb(245, 81, 81);}
 .int {color: rgb(104, 138, 252);}
 .float {color: rgb(255, 0, 255);}
+.metody {color: rgb(173, 3, 142);}
 </style>
 </head>
 <body>
@@ -27,9 +28,9 @@
 </span><span class="znak_bialy">
 </span><span class="keyword">def</span><span class="znak_bialy"> </span><span class="nazwa_zmiennej">show_movies</span><span class="bracket">(</span><span class="bracket">)</span><span class="znak_specjalny">:</span><span class="znak_bialy">
 </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="string">""</span><span class="string">"Wyświetla listę dostępnych filmów i miejsc"</span><span class="string">""</span><span class="znak_bialy">
-</span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="keyword">print</span><span class="bracket">(</span><span class="string">"\nDostępne filmy:"</span><span class="bracket">)</span><span class="znak_bialy">
-</span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="keyword">for</span><span class="znak_bialy"> </span><span class="nazwa_zmiennej">i</span><span class="znak_specjalny">,</span><span class="znak_bialy"> </span><span class="bracket">(</span><span class="nazwa_zmiennej">movie</span><span class="znak_specjalny">,</span><span class="znak_bialy"> </span><span class="nazwa_zmiennej">details</span><span class="bracket">)</span><span class="znak_bialy"> </span><span class="keyword">in</span><span class="znak_bialy"> </span><span class="nazwa_zmiennej">enumerate</span><span class="bracket">(</span><span class="nazwa_zmiennej">movies</span><span class="znak_specjalny">.</span><span class="nazwa_zmiennej">items</span><span class="bracket">(</span><span class="bracket">)</span><span class="znak_specjalny">,</span><span class="znak_bialy"> </span><span class="int">1</span><span class="bracket">)</span><span class="znak_specjalny">:</span><span class="znak_bialy">
-</span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="keyword">print</span><span class="bracket">(</span><span class="nazwa_zmiennej">f</span><span class="string">"{i}. {movie} - {details['miejsca']} miejsc (Cena: {details['cena']} zł)"</span><span class="bracket">)</span><span class="znak_bialy">
+</span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="metody">print</span><span class="bracket">(</span><span class="string">"\nDostępne filmy:"</span><span class="bracket">)</span><span class="znak_bialy">
+</span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="keyword">for</span><span class="znak_bialy"> </span><span class="nazwa_zmiennej">i</span><span class="znak_specjalny">,</span><span class="znak_bialy"> </span><span class="bracket">(</span><span class="nazwa_zmiennej">movie</span><span class="znak_specjalny">,</span><span class="znak_bialy"> </span><span class="nazwa_zmiennej">details</span><span class="bracket">)</span><span class="znak_bialy"> </span><span class="keyword">in</span><span class="znak_bialy"> </span><span class="metody">enumerate</span><span class="bracket">(</span><span class="nazwa_zmiennej">movies</span><span class="znak_specjalny">.</span><span class="nazwa_zmiennej">items</span><span class="bracket">(</span><span class="bracket">)</span><span class="znak_specjalny">,</span><span class="znak_bialy"> </span><span class="int">1</span><span class="bracket">)</span><span class="znak_specjalny">:</span><span class="znak_bialy">
+</span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="znak_bialy"> </span><span class="metody">print</span><span class="bracket">(</span><span class="nazwa_zmiennej">f</span><span class="string">"{i}. {movie} - {details['miejsca']} miejsc (Cena: {details['cena']} zł)"</span><span class="bracket">)</span><span class="znak_bialy">
 </span></pre>
 </body>
-<html>
+</html>

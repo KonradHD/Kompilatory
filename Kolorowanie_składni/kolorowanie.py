@@ -21,10 +21,11 @@ colors_html = ("<!DOCTYPE html>\n<html lang=\"en\">\n"
                ".nazwa_zmiennej {color: rgb(38, 37, 37);}\n"
                ".double_operators {color: rgb(143, 247, 247);}\n"
                ".single_operators {color: rgb(143, 247, 247);}\n"
-               ".bracket {color: rgb(241, 247, 171);}\n"
+               ".bracket {color: rgb(49, 30, 66);}\n"
                ".znak_specjalny {color: rgb(245, 81, 81);}\n"
                ".int {color: rgb(104, 138, 252);}\n"
                ".float {color: rgb(255, 0, 255);}\n"
+               ".metody {color: rgb(173, 3, 142);}\n"
 
                "</style>\n</head>\n<body>\n<pre>\n")
 
